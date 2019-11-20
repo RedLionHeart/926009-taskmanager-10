@@ -181,7 +181,7 @@ const createTaskTemplate = () => {
           </article>`;
 };
 const createTaskEditTemplate = () => {
-  return (`<article class="card card--edit card--yellow card--repeat">
+  return `<article class="card card--edit card--yellow card--repeat">
             <form class="card__form" method="get">
               <div class="card__inner">
                 <div class="card__color-bar">
@@ -435,7 +435,7 @@ const createTaskEditTemplate = () => {
                 </div>
               </div>
             </form>
-          </article>`);
+          </article>`;
 };
 const createLoadMoreButtonTemplate = () => {
   return `<button class="load-more" type="button">load more</button>`;
@@ -459,5 +459,5 @@ new Array(TASK_COUNT)
   .forEach(() => render(taskListElement, createTaskTemplate(), `beforeend`));
 
 render(taskListElement, createTaskEditTemplate(), `afterbegin`);
-render(siteMainElement, createLoadMoreButtonTemplate(), `beforeend`);
+render(taskListElement, createLoadMoreButtonTemplate(), `afterend`);
 
